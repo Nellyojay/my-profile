@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Proud Developer</title>
+  <meta name="description" content="Web developer & designer portfolio — modern, responsive, printable profile." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="top">
+    <!-- NAV -->
+    <nav class="nav" aria-label="Primary">
+      <div class="pill" aria-label="Brand">
+        <img src="assets/profile-placeholder.jpg" alt="Profile photo" class="profile-photo" />
+        Proud Developer
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a class="btn" href="#projects" data-scroll>Projects</a>
+        <a class="btn" href="#experience" data-scroll>Experience</a>
+        <button class="btn" id="themeBtn" type="button" aria-label="Toggle theme">🌓 Theme</button>
+        <a class="btn primary" href="#contact" data-scroll>Hire Me</a>
+      </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- HERO -->
+    <header class="hero">
+      <section>
+        <p class="pill" aria-label="Location & availability">📍 Available for freelance</p>
+        <h1>Building fast, accessible, and beautiful web experiences.</h1>
+        <p class="muted">I am very passionate about creating a digital image of whatever I would like the world to see, be it things I like to build or your business.</p>
+        <div class="actions" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px">
+          <a class="btn primary" href="assets/Nelly-Johnson-CV.pdf" download>⬇️ Download CV</a>
+          <a class="btn" href="#contact" data-scroll>✉️ Contact</a>
+          <a class="btn" href="https://github.com/nellyojay" target="_blank" rel="noopener">⭐ GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/nelly_ojay" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        </div>
+        <div style="display:flex; gap:24px; margin-top:18px; flex-wrap:wrap">
+          <div class="kpi"><span class="val">3+</span> yrs building UIs</div>
+          <div class="kpi"><span class="val">20+</span> projects shipped</div>
+          <div class="kpi"><span class="val">100%</span> client focus</div>
+        </div>
+      </section>
+      <aside class="card contact-card" id="contact">
+        <h2>Contact</h2>
+        <p class="muted">Let’s build something great together.</p>
+        <form id="contactForm" action="https://formspree.io/f/mnqkqvkd" method="POST">
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.35); background:transparent; color:var(--text); margin-bottom:10px" />
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Your email" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.35); background:transparent; color:var(--text); margin-bottom:10px" />
+          <label class="sr-only" for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell me about your project…" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.35); background:transparent; color:var(--text); margin-bottom:10px"></textarea>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+        <div style="margin-top:10px; font-size:14px; color:var(--muted)">📧 nellyjohnson696@gmail.com · ☎️ 0786911950</div>
+      </aside>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="card" id="about" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <p>
+        I'm a Kampala‑based web developer with a strong foundation in <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, plus working knowledge of <strong>React</strong>. I bring cross‑functional experience from <em>sales/marketing</em> and <em>client service</em> — helping me translate requirements into polished, measurable outcomes.
+      </p>
+      <p>
+        <strong>I have a deep understanding of AI tools and their integration in modern web development.</strong> I actively leverage artificial intelligence to automate workflows, enhance user experiences, and deliver smarter, more efficient solutions for clients. My approach ensures your projects benefit from the latest advancements in technology.
+      </p>
+      <div class="grid cols-3" style="margin-top:10px">
+        <div class="card" style="padding:16px">
+          <h3>Core Stack</h3>
+          <div class="tags">
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Creativity</span>
+            <span class="tag">Communication</span>
+            <span class="tag">Attention to Detail</span>
+            <span class="tag">Teamwork</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3 / Flexbox / Grid</span>
+            <span class="tag">JavaScript (ES6+)</span>
+            <span class="tag">Responsive Design</span>
+            <span class="tag">Accessibility (a11y)</span>
+          </div>
+        </div>
+        <div class="card" style="padding:16px">
+          <h3>Tools</h3>
+          <div class="tags">
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Chrome DevTools</span>
+            <span class="tag">Netlify/Vercel</span>
+          </div>
+        </div>
+        <div class="card" style="padding:16px">
+          <h3>Business Skills</h3>
+          <div class="tags">
+            <span class="tag">Client Service</span>
+            <span class="tag">Sales & Marketing</span>
+            <span class="tag">QuickBooks</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Problem Solving</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="card" id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <div class="timeline">
+        <article class="t-item">
+          <h3>Freelance — Web Design & Development</h3>
+          <div class="muted">Remote · 2022 — Present</div>
+          <p>Delivered responsive websites for SMEs: landing pages, product catalogs, and event pages. Focus on performance, SEO basics, and clear content structure.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="card" id="projects" aria-labelledby="proj-h">
+      <h2 id="proj-h">Projects</h2>
+      <div class="grid cols-3">
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop" alt="Project preview — responsive portfolio UI" />
+          <h3>Developer Portfolio Template</h3>
+          <p class="muted">A clean, accessible portfolio starter with dark/light theme, semantic HTML, and print styles. (This site!)</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          <div>
+            <a class="btn" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" alt="Project preview — ecommerce UI" />
+          <h3>ShopLite</h3>
+          <p class="muted">Lightweight product catalog with filter/sort, built with vanilla JS, accessible components, and localStorage cart.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          <div>
+            <a class="btn" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Project preview — dashboard UI" />
+          <h3>EventOps Dashboard</h3>
+          <p class="muted">Internal tool concept for tracking LED screen assets & bookings; focuses on clarity and speed.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+          <div>
+            <a class="btn" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="card" id="certs" aria-labelledby="cert-h">
+      <h2 id="cert-h">Certifications & Awards</h2>
+      <ul>
+        <li>Google Digital Garage — Fundamentals of Digital Marketing (Year)</li>
+        <li>freeCodeCamp — Responsive Web Design (Year)</li>
+        <li>Employee of the Quarter — The Soundz Events Company LTD (Year)</li>
+      </ul>
+    </section>
+
+    <!-- CTA -->
+    <section class="card" aria-label="Call to action" style="text-align:center">
+      <h2>Have a project in mind?</h2>
+      <p class="muted">I can help you plan, design, and build it end‑to‑end — on time and on budget.</p>
+      <a class="btn primary" href="#contact" data-scroll>Let’s talk</a>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> The Proud developer · Built with HTML, CSS & JavaScript · <a href="#top" data-scroll>Back to top</a>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nelly Johnson",
+    "jobTitle": "Proud Developer",
+    "address": {"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},
+    "email": "mailto:nellyjohnson696@gmail.com",
+    "url": "https://your-portfolio-url.example",
+    "sameAs": [
+      "https://github.com/prouddev",
+      "https://www.linkedin.com/in/prouddev"
+    ]
+  }
+  </script>
+</body>
+</html>
