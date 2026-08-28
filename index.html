@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Little Question 💃🏽</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  font-family:Poppins,Arial,sans-serif;
+  background:
+    radial-gradient(circle at top left,#ff7eb3,transparent 35%),
+    radial-gradient(circle at bottom right,#7afcff,transparent 35%),
+    linear-gradient(135deg,#845ec2,#ff6f91);
+}
+.card{
+  width:100%;
+  max-width:500px;
+  padding:38px 30px;
+  border-radius:30px;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);
+  box-shadow:0 25px 60px rgba(0,0,0,.2);
+  text-align:center;
+  animation:appear .8s ease;
+}
+@keyframes appear{
+  from{opacity:0;transform:translateY(30px) scale(.95)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+.emoji{
+  font-size:65px;
+  margin-bottom:15px;
+  animation:float 2.5s ease-in-out infinite;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+h1{
+  color:#5b2c83;
+  font-size:27px;
+  margin-bottom:20px;
+}
+.message{
+  color:#444;
+  font-size:16px;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+button{
+  border:none;
+  padding:14px 30px;
+  border-radius:50px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:all .25s ease;
+}
+.yes{
+  background:linear-gradient(135deg,#00c9a7,#00a878);
+  color:white;
+  box-shadow:0 8px 20px rgba(0,180,140,.3);
+}
+.no{
+  background:linear-gradient(135deg,#ff6b6b,#ee4266);
+  color:white;
+  box-shadow:0 8px 20px rgba(238,66,102,.25);
+}
+button:hover{
+  transform:translateY(-4px) scale(1.04);
+}
+button:active{
+  transform:scale(.95);
+}
+.response{
+  margin-top:25px;
+  font-size:18px;
+  font-weight:bold;
+  color:#5b2c83;
+}
+.celebrate{
+  animation:celebrate .6s ease;
+}
+@keyframes celebrate{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.12) rotate(2deg)}
+  100%{transform:scale(1)}
+}
+.phone{
+  font-size:28px;
+  font-weight:bold;
+  color:#5b2c83;
+  margin-top:10px;
+  letter-spacing:1px;
+}
+.plans{
+  margin-top:15px;
+  font-size:17px;
+  color:#555;
+  line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="card">
+
+  <div class="emoji">💃🏽</div>
+
+  <h1>One Little Question... 💜</h1>
+
+  <p class="message">
+    I have this afrolatin party next month that I think is gonna be
+    really fun. It's kind of afrolatin or kompa party.
+
+    <br><br>
+
+    I would love you to join me if u are interested in exploring
+    some new dance styles. That's if u like to dance.
+
+    <br><br>
+
+    So... would you like to come with me? 💃🏽🕺🏽
+  </p>
+
+  <div class="buttons">
+    <button class="yes" onclick="answerYes()">Yes 💃🏽</button>
+    <button class="no" onclick="answerNo()">No 😅</button>
+  </div>
+
+</div>
+
+<script>
+function answerYes() {
+  const card = document.getElementById("card");
+
+  card.innerHTML = `
+    <div class="emoji">😊</div>
+
+    <div class="phone">
+      0786911950
+    </div>
+
+    <p class="plans">
+      Call me some time so we can make plans 😊
+    </p>
+  `;
+
+  card.classList.remove("celebrate");
+  void card.offsetWidth;
+  card.classList.add("celebrate");
+}
+
+function answerNo() {
+  const card = document.getElementById("card");
+
+  card.innerHTML = `
+    <div class="emoji">😞</div>
+  `;
+
+  card.classList.remove("celebrate");
+  void card.offsetWidth;
+  card.classList.add("celebrate");
+}
+</script>
+
+</body>
+</html>
