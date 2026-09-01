@@ -18,22 +18,59 @@
       justify-content: center;
       align-items: center;
       padding: 20px;
-      font-family: Poppins, Arial, sans-serif;
+      font-family: "Comic Sans MS", "Trebuchet MS", cursive, sans-serif;
       background:
-        radial-gradient(circle at top left, #ff7eb3, transparent 35%),
-        radial-gradient(circle at bottom right, #7afcff, transparent 35%),
-        linear-gradient(135deg, #845ec2, #ff6f91);
+        radial-gradient(circle at top left, rgba(235, 86, 86, 0.745), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.2), transparent 25%),
+        linear-gradient(135deg, #f7d77a, #f4a261, #c77dff, #9ec5fe);
     }
 
     .card {
+      position: relative;
       width: 100%;
-      max-width: 500px;
-      padding: 38px 30px;
-      border-radius: 30px;
-      background: rgba(255, 255, 255, .94);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, .2);
+      max-width: 520px;
+      padding: 38px 30px 32px;
+      background: linear-gradient(180deg, #fff9b1 0%, #fef3a3 100%);
+      border: 2px solid rgba(161, 123, 28, 0.49);
+      box-shadow:
+        0 16px 28px rgba(30, 21, 4, 0.384),
+        0 0 0 8px rgba(255, 255, 255, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.7);
       text-align: center;
       animation: appear .8s ease;
+      overflow: hidden;
+    }
+
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background: rgba(191, 65, 65, 0.129);
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 2px rgba(166, 130, 38, 0.148);
+      top: 12px;
+    }
+
+    .card::before {
+      left: 14px;
+    }
+
+    .card::after {
+      right: 14px;
+    }
+
+    .paper-tape {
+      position: absolute;
+      left: 50%;
+      top: -10px;
+      transform: translateX(-50%) rotate(-3deg);
+      width: 120px;
+      height: 22px;
+      background: rgba(171, 110, 53, 0.196);
+      border: 1px solid rgba(123, 93, 16, 0.12);
+      box-shadow: 0 1px 6px rgba(92, 64, 17, 0.1);
     }
 
     @keyframes appear {
@@ -68,31 +105,35 @@
 
     h1 {
       color: #5b2c83;
-      font-size: 27px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 18px;
+      line-height: 1.3;
+      letter-spacing: 0.5px;
     }
 
     .message {
-      color: #444;
+      color: #4d3b2d;
       font-size: 16px;
       line-height: 1.8;
-      margin-bottom: 30px;
+      margin-bottom: 26px;
     }
 
     .buttons {
       display: flex;
       justify-content: center;
       gap: 15px;
+      flex-wrap: wrap;
     }
 
     button {
       border: none;
-      padding: 14px 30px;
-      border-radius: 50px;
+      padding: 14px 28px;
+      border-radius: 18px;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
       transition: all .25s ease;
+      box-shadow: 0 6px 12px rgba(77, 59, 45, 0.12);
     }
 
     .yes {
@@ -160,6 +201,7 @@
 <body>
 
   <div class="card" id="card">
+    <div class="paper-tape"></div>
 
     <div class="emoji">🙃</div>
 
@@ -176,7 +218,8 @@
 
       <br><br>
 
-      I was wondering if you would like to go out with me for a drink or something. I promise not to be wierd about it.
+      I was wondering if you would like to go out with me for a drink or something sometime. I promise not to be wierd
+      about it.
     </p>
 
     <div class="buttons">
@@ -211,11 +254,10 @@
       const card = document.getElementById("card");
 
       card.innerHTML = `
-    <div class="emoji message">eh maama nawe Nakamate😭😭. Anyway kale, I respect your decision, I think u are most beautiful and i really would like you to get to know me somehow😞
+    <div class="message">eh maama nawe Nakamate😭😭. Anyway kale, I respect your decision.
 <br></br>
 
- But, if it is a pass for you... I will just know if I don't hear from you I guess😪
-
+      I hope you have a great day😊
 </div>
   `;
 
